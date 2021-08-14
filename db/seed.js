@@ -58,7 +58,7 @@ function seedDatabase() {
     )
   )
   .on('end', () => {
-    const query = "COPY summary (summary, short_summary, copyright) FROM '/Users/alonzosanchez/sdc/Summary-Service/summary.csv' WITH (FORMAT CSV, DELIMITER ',');"
+    const query = "COPY summary (summary, short_summary, copyright) FROM '/Users/alonzosanchez/sdc/ec2database/summary.csv' WITH (FORMAT CSV, DELIMITER ',');"
 
 
     db.connect((err,client, done) => {
